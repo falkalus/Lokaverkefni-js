@@ -22,13 +22,39 @@ og svo heldur sagan áfram eftir því hvað notandinn gerði.
 Það væri líka hægt að bjóða uppá að skrifa eitthvað svar inn í <input type=”text” />
 */
 
-/* you name
-There once was a beautifull princess who many wanted to marry but she chose __
-Unfortunatly soon after the weeding the princess fell ill, griefstricken
- __ wished to be sealed inside the crypt with her
- After a few days __ heard a hissing noice coming from one of the crecks
- It was a snake that crawled into the crypt with them
- __ feared the snake was evil, What did __ do
- option a
- option b*/
+//you name
+var suitor = prompt("Give the Suitor a name");
 
+//saga Kafli 1
+document.querySelector(".saga").innerHTML =`<h2>There once was a beautifull princess who many wanted to marry, 
+of all the suitors she chose ${suitor}. Unfortunatly soon after the wedding the princess fell ill and died. 
+Grief stricken ${suitor} wished to be sealed inside the crypt with the lovely princess. After a few days in the cript alone, 
+${suitor} heard a hissing noice coming from one of the crecks. 
+It was a snake that crawled into the crypt with them and slithered towards the princess. What did ${suitor} do?</h2>`
+
+//Option a to b
+document.querySelector(".options").innerHTML =`
+<button class="kill">Kill the Snake</button>
+<img src="img/Cut.jpg"/>
+
+<button class="none">Nothing</button>
+<img src="img/nothing.jpg"/>`
+
+button.onclick = function() {
+
+}
+/*
+var firstProblem = prompt("What did ${suitor} do?\nKill the Snake, or Nothing?");
+if (firstProblem === "Kill the Snake"){
+  document.getElementByClass("saga").innerHTML = `${suitor} grabbed a dagger and sliced the snake three times and it died instantly.
+Soon after there came another hissing noice from the crack where the now dead snake had entered. Out of the creck there came a second snake
+and in its mouth i carried 3 leafs. The second snake placed the leaves over the dead snakes wounds and after a moment the dead snake came alive.
+Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`
+}
+else if (firstProblem === "Nothing"){document.getElementByClass("saga").innerHTML = `You die alone.`;
+/*
+saga Kafli 2
+document.querySelector(".saga").innerHTML =`${suitor} grabbed a dagger and sliced the snake three times and it died instantly.
+Soon after there came another hissing noice from the crack where the now dead snake had entered. Out of the creck there came a second snake
+and in its mouth i carried 3 leafs. The second snake placed the leaves over the dead snakes wounds and after a moment the dead snake came alive.
+Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`*/
