@@ -13,9 +13,7 @@ var display_page = function(page_number) {
     // sýnum options fyrir ákveðna síðu EFITT!! 
     // part. The page's "options" property stores a function. call that function.
     page.options();
-
 }
-
 // Adds a button to the page with the given text and when it's pressed we
 // display the given page number
 var add_button_option = function(text, page_number) {
@@ -35,13 +33,11 @@ var add_button_option = function(text, page_number) {
     button.onclick = function() {
         display_page(page_number);
     };
-
     // The reason we don't use 'innerHTML' is that when we change that
     // property on the story section all 'onclick' properties on the buttons
     // in it are erased! It's a weird quirk that's really annyoing, but we
     // just work around it by creating the elements manually.
 };
-
 var add_image = function(image_url) {
     var options_section = document.querySelector("#options");
 
@@ -50,17 +46,16 @@ var add_image = function(image_url) {
 
     image.src = image_url;
 }
-
 // Here we store all the pages in the story, one object for each page.
 var book = [
     // page 0
     {
-        text: "A snake!",
+        text: "There once was a beautifull princess who many wanted to marry," 
         options: function() {
             add_button_option("Kill it!", 1);
-            add_image("tree.png");
+            add_image("img/Cut.jpg");
             add_button_option("Do nothing", 2);
-            add_image("stone.png");
+            add_image("img/nothing.jpg");
         },
     },
 

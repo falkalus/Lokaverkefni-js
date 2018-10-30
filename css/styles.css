@@ -26,23 +26,24 @@ h2 {
 p {
   color: #8d9aa5;
   font-size: 1.4em;
-  margin-bottom: 15px;
   line-height: 1.4;
 }
 .options {
-  margin-top: 30px;
-  text-align: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
 }
 .options input {
   border-radius: 10px;
   border: 1px solid gray;
   padding: 10px;
-  margin-right: 10px;
-  display: flex;
-  margin: auto;
+  margin: 10px;
 }
 img {
-  width: 25%;
+  width: 30%;
 }
 .options:hover {
 color: red;
@@ -69,6 +70,7 @@ button {
   color: white;
   border: none;
   border-radius: 10px;
+  margin: 10px;
 }
 
 button:hover {
