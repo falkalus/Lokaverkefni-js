@@ -40,21 +40,23 @@ document.querySelector(".options").innerHTML =`
 <button class="none">Nothing</button>
 <img src="img/nothing.jpg"/>`
 
-button.onclick = function() {
+document.querySelector(".kill").onclick = function() {
+	document.querySelector(".saga").innerHTML =`<h2>${suitor} grabbed a dagger and sliced the snake three times and it died instantly.
+	Soon after there came another hissing noice from the crack where the now dead snake had entered. Out of the creck there came a second snake
+	and in its mouth i carried 3 leafs. The second snake placed the leaves over the dead snakes wounds and after a moment the dead snake came alive.
+	Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`
 
+	document.querySelector(".options").innerHTML =`
+	<p>How does it make you feel?</p>
+	<input/>
+	<button class="take">Use leaves</button>
+	<img src="img/leaves.jpg"/>`
 }
-/*
-var firstProblem = prompt("What did ${suitor} do?\nKill the Snake, or Nothing?");
-if (firstProblem === "Kill the Snake"){
-  document.getElementByClass("saga").innerHTML = `${suitor} grabbed a dagger and sliced the snake three times and it died instantly.
-Soon after there came another hissing noice from the crack where the now dead snake had entered. Out of the creck there came a second snake
-and in its mouth i carried 3 leafs. The second snake placed the leaves over the dead snakes wounds and after a moment the dead snake came alive.
-Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`
+
+document.querySelector(".none").onclick = function() {
+	document.querySelector(".saga").innerHTML =`<h2>${suitor} did nothing, and after 10 days in the crypt met with death.</h2>`
+
+	document.querySelector(".options").innerHTML =`
+	<img src="img/end.jpg"/>`
+	alert("This is the end of the Suitors story");
 }
-else if (firstProblem === "Nothing"){document.getElementByClass("saga").innerHTML = `You die alone.`;
-/*
-saga Kafli 2
-document.querySelector(".saga").innerHTML =`${suitor} grabbed a dagger and sliced the snake three times and it died instantly.
-Soon after there came another hissing noice from the crack where the now dead snake had entered. Out of the creck there came a second snake
-and in its mouth i carried 3 leafs. The second snake placed the leaves over the dead snakes wounds and after a moment the dead snake came alive.
-Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`*/
