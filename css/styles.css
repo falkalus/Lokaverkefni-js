@@ -80,3 +80,13 @@ button:hover {
   -moz-box-shadow: 0 2px 0 0 #623437;
   box-shadow: 0 2px 0 0 #623437;
 }
+button.after_good  {
+  background: #60aea4;
+}
+button.after_good:hover {
+  background: #60aea4;
+  border-color: #60aea4;
+  -webkit-box-shadow: 0 2px 0 0 #225650;
+  -moz-box-shadow: 0 2px 0 0 #225650;
+  box-shadow: 0 2px 0 0 #225650;
+}

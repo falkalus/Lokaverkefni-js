@@ -34,20 +34,16 @@ var get_page = function(page_number) {
 		if (page_number == 4) {
 			alert("Did you remember?")
 			}
- 
- /* var input = document.getElementById("#feeling");
-  var filter = input.value.toUpperCase();
- if (filter == "") {
-    return;
-  }
-    if (input.toUpperCase() == angry) {
-    	alert(red);
-    } 
+};
 
-	on_page++*/
-}
-
-on_page = 0 
+var final_choose = function() {
+	var input = document.querySelector("#feeling")
+	if (input.value.toUpperCase() == "FORGIVE"){
+		get_page(5);
+	} else if (input.value.toUpperCase() == "REVENGE") {
+		get_page(6);
+	}
+};
 
 
 //Book [Array]
@@ -103,8 +99,28 @@ var book = [
 		not to ${suitor} but to the kind captain.</h2>`,
 	"options":	
 		`<img src="img/love.jpg" style="width:500px; height:200px;"/> 
-		<button class="after" onclick="get_page()">${suitor} (Forgive or Revenge)</button>
+		<button class="after" onclick="final_choose()">${suitor} (Forgive or Revenge)</button>
 		<input id="feeling"/>`
+	}, 
+	{
+	"saga":
+		`<h2>When the young couple returned to the Kingdom ${suitor} knew that the princess was in love
+		with the kind captain. ${suitor} gave her his premission to run away with the captain, 
+		she had loved ${suitor} in another life and her love had died with her, the magical snake leaves could
+		not bring back the love.</h2>`,
+	"options":	
+		`<img src="img/hope.jpg" style="width:400px; height:150px;"/> 
+		<button class="after_good" onclick="get_page(0)">Back</button>`
+	}, 
+	{
+	"saga":
+		`<h2>When the young couple returned to the Kingdom ${suitor} was filled with rage
+		and he could not forgive the princess for falling in love with the captain. The princess bagged ${suitor}
+		to set her free but insted he had the princess and the captain tied together, and sent out
+		in a boat run through with holes.</h2>`,
+	"options":	
+		`<img src="img/angry.jpg" style="width:400px; height:150px;"/> 
+		<button class="after" onclick="get_page(0)">Back</button>`
 	}, 
 ];
 
