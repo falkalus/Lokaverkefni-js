@@ -31,6 +31,9 @@ var get_page = function(page_number) {
 		if (page_number == 2) {
 			alert("This is the end of the Suitors story")
 			}
+		if (page_number == 4) {
+			alert("Did you remember?")
+			}
  
  /* var input = document.getElementById("#feeling");
   var filter = input.value.toUpperCase();
@@ -71,7 +74,8 @@ var book = [
 		The second snake placed the leaves over the dead snakes wounds and after a moment 
 		the dead snake came alive. Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`,
 	"options":
-		`<p> -Remember- </p>
+		`<p> -Remember- 
+		Death will always leave a mark</p>
 		<button class="crypt" onclick="get_page(3)">Use leaves</button>
 		<img src="img/leaves.jpg"/>`
 	},
@@ -93,12 +97,13 @@ var book = [
 	}, 
 	{
 	"saga":
-		`<h2>${suitor} placed the leaves on the princess, slowly her cheeks became red and she opened her eyes.
-		The leaves had broght her back just as it had the snake. ${suitor} and the princess escaped the crypt
-		and headed to their kingdom.</h2>`,
+		`<h2>Something was different about the princess, 
+		she was cold to ${suitor} and would not speak to him.
+		${suitor} worried about the princess untill he heard her speak....secretly, 
+		not to ${suitor} but to the kind captain.</h2>`,
 	"options":	
-		`<img src="img/alive.jpg"/> 
-		<button class="after" onclick="get_page(4)">Chose Hope or anger</button>
+		`<img src="img/love.jpg" style="width:500px; height:200px;"/> 
+		<button class="after" onclick="get_page()">${suitor} (Forgive or Revenge)</button>
 		<input id="feeling"/>`
 	}, 
 ];
