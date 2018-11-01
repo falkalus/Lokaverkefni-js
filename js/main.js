@@ -44,7 +44,7 @@ var final_choose = function() {
 		get_page(6);
 	}
 };
-
+//test
 
 //Book [Array]
 var book = [ 
