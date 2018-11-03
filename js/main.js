@@ -34,6 +34,9 @@ var get_page = function(page_number) {
 		if (page_number == 4) {
 			alert("Did you remember?")
 			}
+		if (book[page_number].script != undefined) {
+			book[page_number].script();
+		}
 };
 
 /* --------------choosing the ending--------------*/
@@ -45,7 +48,15 @@ var final_choose = function() {
 		get_page(6);
 	}
 };
+/* --------------BAD ending--------------*/
+var display_snake = function() {
+	var button = document.querySelector(".after_bad")
+	button.style.backgroundImage =  "url(img/evil.jpg)";
+	button.style.height = "250px";
+	button.style.width = "600px";
+	button.style.backgroundRepeat = "no-repeat";
 
+}
 /* --------------Book [Array]--------------*/
 var book = [ 
 	{
@@ -120,7 +131,21 @@ var book = [
 		in a boat run through with holes.</h2>`,
 	"options":	
 		`<img src="img/angry.jpg" style="width:400px; height:150px;"/> 
-		<button class="after_bad" onclick="get_page(0)">Back</button>`
+		<button class="after_bad" onclick="get_page(7)">No return</button>`
+	}, 
+	{
+	"saga":
+		`<h2>You...........<br> 
+		 Forced me back into this world</h2>`,
+	"options":	
+		`<button class="after_bad" onclick="display_snake()">Ssssssssssssss</button>`,
+	"script":
+	function() {
+		document.querySelector("body").style="background-color: #761a1a;"
+		document.querySelector("h1").style="color: #fff;"
+		document.querySelector("h2").style="color: #fff;"
+		document.querySelector(".container").style="background-color: #492d2d;"
+	}
 	}, 
 ];
 /* --------------what page you start on when you go to the site--------------*/
