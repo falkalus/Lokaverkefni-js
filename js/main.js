@@ -21,7 +21,7 @@ Hvort tekur þú bláu eða rauðu?”
 og svo heldur sagan áfram eftir því hvað notandinn gerði. 
 Það væri líka hægt að bjóða uppá að skrifa eitthvað svar inn í <input type=”text” />
 */
-//you name
+/* --------------write the Suitor name--------------*/
 var suitor = prompt("Give the Suitor a name");
 
 var get_page = function(page_number) {
@@ -36,6 +36,7 @@ var get_page = function(page_number) {
 			}
 };
 
+/* --------------choosing the ending--------------*/
 var final_choose = function() {
 	var input = document.querySelector("#feeling")
 	if (input.value.toUpperCase() == "FORGIVE"){
@@ -44,16 +45,15 @@ var final_choose = function() {
 		get_page(6);
 	}
 };
-//test
 
-//Book [Array]
+/* --------------Book [Array]--------------*/
 var book = [ 
 	{
 	"saga":
-		`<h2>There once was a beautifull princess who many wanted to marry, 
-		of all the suitors she chose ${suitor}. Unfortunatly soon after the wedding the princess fell ill 
-		and died. Grief stricken ${suitor} wished to be sealed inside the crypt with the lovely princess. 
-		After a few days in the cript alone, ${suitor} heard a hissing noice coming from one of the crecks. 
+		`<h2>There once was a beautiful princess who many wanted to marry, 
+		of all the suitors she chose ${suitor}. Unfortunately soon after the wedding the princess fell ill 
+		and died. Grief-stricken ${suitor} wished to be sealed inside the crypt with the lovely princess. 
+		After a few days in the crypt alone, ${suitor} heard a hissing noise coming from a crack in the wall. 
 		It was a snake that crawled into the crypt with them and slithered towards the princess. 
 		What did ${suitor} do?</h2>`,	
 	"options":
@@ -65,10 +65,10 @@ var book = [
 	{
 	"saga":
 		`<h2>${suitor} grabbed a dagger and sliced the snake three times and it died instantly.
-		Soon after there came another hissing noice and out of the creck 
+		Soon after there came another hissing noise and out of the crack 
 		there came a second snake and in its mouth i carried 3 leafs. 
 		The second snake placed the leaves over the dead snakes wounds and after a moment 
-		the dead snake came alive. Both snakes crawled through the creck leaving the 3 leaves behind.</h2>`,
+		the dead snake came alive. Both snakes crawled through the crack leaving the 3 leaves behind.</h2>`,
 	"options":
 		`<p> -Remember- 
 		Death will always leave a mark</p>
@@ -85,7 +85,7 @@ var book = [
 	{
 	"saga":
 		`<h2>${suitor} placed the leaves on the princess, slowly her cheeks became red and she opened her eyes.
-		The leaves had broght her back just as it had the snake. ${suitor} and the princess escaped the crypt
+		The leaves had brought her back just as it had the snake. ${suitor} and the princess escaped the crypt
 		and headed to their kingdom.</h2>`,
 	"options":	
 		`<img src="img/alive.jpg"/> 
@@ -94,9 +94,9 @@ var book = [
 	{
 	"saga":
 		`<h2>Something was different about the princess, 
-		she was cold to ${suitor} and would not speak to him.
-		${suitor} worried about the princess untill he heard her speak....secretly, 
-		not to ${suitor} but to the kind captain.</h2>`,
+		she was cold and would not speak to ${suitor},
+		${suitor} worried about the princess. ${suitor} soon relised that on their journey home 
+		the princess had fallen in love with the kind captain.</h2>`,
 	"options":	
 		`<img src="img/love.jpg" style="width:500px; height:200px;"/> 
 		<button class="after" onclick="final_choose()">${suitor} (Forgive or Revenge)</button>
@@ -104,10 +104,10 @@ var book = [
 	}, 
 	{
 	"saga":
-		`<h2>When the young couple returned to the Kingdom ${suitor} knew that the princess was in love
-		with the kind captain. ${suitor} gave her his premission to run away with the captain, 
-		she had loved ${suitor} in another life and her love had died with her, the magical snake leaves could
-		not bring back the love.</h2>`,
+		`<h2>When the young couple returned to the Kingdom the princess was lost and sad. 
+		${suitor} could not stand to see her that way so the princess was given premission to run away 
+		with the captain she now loved. The ${suitor} knew that their love had died with her, the magical leaves could
+		not bring back her love. Death will always leave a mark.....</h2>`,
 	"options":	
 		`<img src="img/hope.jpg" style="width:400px; height:150px;"/> 
 		<button class="after_good" onclick="get_page(0)">Back</button>`
@@ -115,15 +115,15 @@ var book = [
 	{
 	"saga":
 		`<h2>When the young couple returned to the Kingdom ${suitor} was filled with rage
-		and he could not forgive the princess for falling in love with the captain. The princess bagged ${suitor}
-		to set her free but insted he had the princess and the captain tied together, and sent out
+		and could not forgive the princess for falling in love with the captain. The princess begged ${suitor}
+		to set her free but insted the princess and the captain were tied together, and sent out
 		in a boat run through with holes.</h2>`,
 	"options":	
 		`<img src="img/angry.jpg" style="width:400px; height:150px;"/> 
-		<button class="after" onclick="get_page(0)">Back</button>`
+		<button class="after_bad" onclick="get_page(0)">Back</button>`
 	}, 
 ];
-
+/* --------------what page you start on when you go to the site--------------*/
 get_page(0)
 
 
